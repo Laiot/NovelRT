@@ -9,7 +9,7 @@ set(OpenGL_GL_PREFERENCE GLVND)
 
 include_directories(../include)
 
-add_executable(NovelRTTest src/main.cpp)
-target_link_libraries(NovelRTTest LINK_PUBLIC libNovelRT)
+add_executable(NovelRTSamples src/main.cpp)
+target_link_libraries(NovelRTSamples LINK_PUBLIC libNovelRT)
 
-add_custom_command(TARGET NovelRTTest POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_BINARY_DIR}/bin" $<TARGET_FILE_DIR:NovelRTTest>)
+add_custom_command(TARGET NovelRTSamples POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory "${CMAKE_BINARY_DIR}/bin" $<TARGET_FILE_DIR:NovelRTSamples>)

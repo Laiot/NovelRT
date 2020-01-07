@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
   lua_register(L, "average", average);
   luaL_dofile(L, "avg.lua");
   lua_close(L);
-  auto runner = NovelRT::NovelRunner(0, "NovelRTTest");
+  auto runner = NovelRT::NovelRunner(0, "NovelRTSamples");
   auto console = NovelRT::LoggingService(NovelRT::Utilities::Misc::CONSOLE_LOG_APP);
 
   auto novelChanTransform = NovelRT::Transform(NovelRT::Maths::GeoVector<float>(1920 / 2, 1080 / 2), 2, NovelRT::Maths::GeoVector<float>(456, 618));
