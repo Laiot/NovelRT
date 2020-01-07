@@ -41,8 +41,6 @@ set(NOVELRT_RESOURCES
 
 file(COPY ${NOVELRT_RESOURCES} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
-include_directories(src)
-
 find_package(Doxygen QUIET)
 
 set(NOVELRT_EXECUTABLE_SOURCES
