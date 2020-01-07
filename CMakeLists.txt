@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(OpenGL_GL_PREFERENCE GLVND)
 
 add_subdirectory(src)
+add_subdirectory(samples)
 
 set(NOVELRT_FONTS
   src/Gayathri-Regular.ttf
@@ -52,8 +53,6 @@ set(NOVELRT_EXECUTABLE_LINK_LIBRARIES
   libNovelRT
 )
 
-add_executable(NovelRT ${NOVELRT_EXECUTABLE_SOURCES})
-target_link_libraries(NovelRT libNovelRT)
 
 if (WIN32)
   set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
