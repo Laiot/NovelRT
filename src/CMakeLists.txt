@@ -59,7 +59,7 @@ set(NOVELRT_LIBRARY_HEADERS
   ../include/NovelRT/Utilities/Misc.h
   ../include/NovelRT/Windowing/WindowingService.h)
 
-  source_group(TREE ../ FILES ${NOVELRT_LIBRARY_HEADERS})
+  #source_group(TREE ../ FILES ${NOVELRT_LIBRARY_HEADERS})
 
 set(NOVELRT_LIBRARY_SOURCES
   NovelRT/DebugService.cpp
@@ -82,7 +82,7 @@ set(NOVELRT_LIBRARY_SOURCES
   NovelRT/Timing/StepTimer.cpp
   NovelRT/Windowing/WindowingService.cpp)
 
-  source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${NOVELRT_LIBRARY_SOURCES})
+  #source_group(TREE ${CMAKE_CURRENT_SOURCE_DIR} FILES ${NOVELRT_LIBRARY_SOURCES})
 
 set(NOVELRT_LINK_LIBRARIES
   Freetype::Freetype
