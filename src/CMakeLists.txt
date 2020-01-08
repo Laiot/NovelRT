@@ -1,6 +1,4 @@
 cmake_minimum_required(VERSION 3.13)
-
-project(NovelRT VERSION 0.0.1)
 include(GNUInstallDirs)
 include_directories(../include)
 
