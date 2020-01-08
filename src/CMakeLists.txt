@@ -22,17 +22,6 @@ include_directories(${LUA_INCLUDE_DIR})
 find_library(LUA_LIBRARY lua)
 link_libraries(${LUA_LIBRARY})
 
-#Default shaders
-configure_file(Resources/DefaultShaders/BasicFragmentShader.glsl BasicFragmentShader.glsl COPYONLY)
-configure_file(Resources/DefaultShaders/BasicVertexShader.glsl BasicVertexShader.glsl COPYONLY)
-configure_file(Resources/DefaultShaders/FontFragmentShader.glsl FontFragmentShader.glsl COPYONLY)
-configure_file(Resources/DefaultShaders/FontVertexShader.glsl FontVertexShader.glsl COPYONLY)
-configure_file(Resources/DefaultShaders/TexturedFragmentShader.glsl TexturedFragmentShader.glsl COPYONLY)
-configure_file(Resources/DefaultShaders/TexturedVertexShader.glsl TexturedVertexShader.glsl COPYONLY)
-
-#Default font files
-configure_file(Resources/FontFiles/Gayathri-Regular.ttf Gayathri-Regular.ttf COPYONLY)
-
 set(LIBNOVELRT_RESOURCES
     Resources/DefaultShaders/BasicFragmentShader.glsl;
     Resources/DefaultShaders/BasicVertexShader.glsl;
@@ -127,3 +116,7 @@ set(NOVELRT_LIBRARY_LINK_LIBRARIES
 
 add_library(libNovelRT SHARED ${NOVELRT_LIBRARY_HEADERS} ${NOVELRT_LIBRARY_SOURCES})
 target_link_libraries(libNovelRT ${NOVELRT_LIBRARY_LINK_LIBRARIES})
+
+add_custom_command(TARGET libNovelRT POST_BUILD
+  COMMAND ${CMAKE_COMMAND} -E copy_if_different ${LIBNOVELRT_RESOURCES} $<TARGET_FILE_DIR:libNovelRT>
+)
