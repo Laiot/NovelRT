@@ -14,3 +14,5 @@ add_executable(NovelRTSamples src/main.cpp)
 add_dependencies(NovelRTSamples libNovelRT)
 
 target_link_libraries(NovelRTSamples LINK_PUBLIC libNovelRT)
+
+add_custom_command(TARGET NovelRTSamples POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory "${PROJECT_SOURCE_DIR}/src/$<CONFIGURATION>" $<TARGET_FILE_DIR:NovelRTSamples>)

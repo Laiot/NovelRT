@@ -24,15 +24,15 @@ find_library(LUA_LIBRARY lua)
 link_libraries(${LUA_LIBRARY})
 
 #Default shaders
-#configure_file(Resources/DefaultShaders/BasicFragmentShader.glsl BasicFragmentShader.glsl COPYONLY)
-#configure_file(Resources/DefaultShaders/BasicVertexShader.glsl BasicVertexShader.glsl COPYONLY)
-#configure_file(Resources/DefaultShaders/FontFragmentShader.glsl FontFragmentShader.glsl COPYONLY)
-#configure_file(Resources/DefaultShaders/FontVertexShader.glsl FontVertexShader.glsl COPYONLY)
-#configure_file(Resources/DefaultShaders/TexturedFragmentShader.glsl TexturedFragmentShader.glsl COPYONLY)
-#configure_file(Resources/DefaultShaders/TexturedVertexShader.glsl TexturedVertexShader.glsl COPYONLY)
+configure_file(Resources/DefaultShaders/BasicFragmentShader.glsl BasicFragmentShader.glsl COPYONLY)
+configure_file(Resources/DefaultShaders/BasicVertexShader.glsl BasicVertexShader.glsl COPYONLY)
+configure_file(Resources/DefaultShaders/FontFragmentShader.glsl FontFragmentShader.glsl COPYONLY)
+configure_file(Resources/DefaultShaders/FontVertexShader.glsl FontVertexShader.glsl COPYONLY)
+configure_file(Resources/DefaultShaders/TexturedFragmentShader.glsl TexturedFragmentShader.glsl COPYONLY)
+configure_file(Resources/DefaultShaders/TexturedVertexShader.glsl TexturedVertexShader.glsl COPYONLY)
 
 #Default font files
-#configure_file(Resources/FontFiles/Gayathri-Regular.ttf Gayathri-Regular.ttf COPYONLY)
+configure_file(Resources/FontFiles/Gayathri-Regular.ttf Gayathri-Regular.ttf COPYONLY)
 
 set(LIBNOVELRT_RESOURCES
     Resources/DefaultShaders/BasicFragmentShader.glsl;
