@@ -23,20 +23,10 @@ set(NOVELRT_SCRIPTS
   src/avg.lua
 )
 
-set(NOVELRT_SHADERS
-  src/BasicFragmentShader.glsl
-  src/BasicVertexShader.glsl
-  src/FontFragmentShader.glsl
-  src/FontVertexShader.glsl
-  src/TexturedFragmentShader.glsl
-  src/TexturedVertexShader.glsl
-)
-
 set(NOVELRT_RESOURCES
-  ${NOVELRT_FONTS}
+  #${NOVELRT_FONTS}
   ${NOVELRT_IMAGES}
   ${NOVELRT_SCRIPTS}
-  ${NOVELRT_SHADERS}
 )
 
 file(COPY ${NOVELRT_RESOURCES} DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
