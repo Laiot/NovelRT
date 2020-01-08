@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.13)
+project(NovelRTSamples VERSION 0.0.1)
 include(GNUInstallDirs)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
