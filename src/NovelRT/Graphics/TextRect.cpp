@@ -74,6 +74,7 @@ namespace NovelRT::Graphics {
       target->setTexture(ch.texture);
       target->getTransform().setPosition(currentWorldPosition);
       target->getTransform().setScale(Maths::GeoVector<float>(static_cast<float>(ch.size.getX()), static_cast<float>(ch.size.getY())));
+      target->getTransform().setColourConfig(_colourConfig);
       target->setActive(true);
       ttfOrigin.setX(ttfOrigin.getX() + (ch.advance >> 6));
     }
